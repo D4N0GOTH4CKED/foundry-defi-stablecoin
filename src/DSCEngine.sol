@@ -282,12 +282,12 @@ contract DSCEngine is ReentrancyGuard {
         private
     {
         s_collateralDeposited[from][tokenCollateralAddress] -= amountCollateral;
-        emit CollateralRedeemed(from, to, amountCollateral, tokenCollateralAddress);
 
         bool success = IERC20(tokenCollateralAddress).transfer(to, amountCollateral);
         if (!success) {
             revert DSCEngine__TransferFailed();
         }
+        emit CollateralRedeemed(from, to, amountCollateral, tokenCollateralAddress);
     }
 
     function _getAccountInformation(address user)

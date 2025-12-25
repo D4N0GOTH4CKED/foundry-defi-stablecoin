@@ -33,26 +33,7 @@ contract Handler is Test {
         // ethUsdPriceFeed = MockV3Aggregator(dsce.getCollateralTokenPriceFeed(weth));
     }
 
-    // function mintDsc(uint256 amount, uint256 addressSeed) public {
-    //     if (usersWithCollateralDeposited.length == 0) {
-    //         return;
-    //     }
-    //     address sender = usersWithCollateralDeposited(addressSeed % usersWithCollateralDeposited.length);
-    //     (uint256 totalDscMinted, uint256 collateralValueInUsd) = dsce.getAccountInformation(sender);
-
-    //     int256 maxDscToMint = (int256(collateralValueInUsd) / 2) - int256(totalDscMinted);
-    //     if(maxDscToMint < 0){
-    //         return;
-    //     }
-    //     amount = bound(amount, 0, uint256(maxDscToMint));
-    //     if(maxDscToMint == 0){
-    //         return;
-    //     }
-    //     vm.startPrank(sender);
-    //     dsce.mintDsc(amount);
-    //     vm.stopPrank();
-    //     timesMintIsCalled++;
-    // }
+    
 
     // redeem collateral
     function depositCollateral(uint256 collateralSeed, uint256 amountCollateral) public {

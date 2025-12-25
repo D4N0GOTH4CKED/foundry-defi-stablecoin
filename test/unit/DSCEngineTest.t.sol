@@ -110,5 +110,3 @@ contract DSCEngineTest is Test {
     }
 }
 
-// approve
-// selector
